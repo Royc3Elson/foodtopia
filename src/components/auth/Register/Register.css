@@ -1,0 +1,96 @@
+.register {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
+    font-weight: 300;
+    font-family: 'Nunito', sans-serif;
+}
+
+.register-container {
+    background: #f3f3f3;
+    border: 1.5px solid #ddd;
+    border-radius: 15px;
+    padding: 3rem;
+    margin: 2rem 0 1rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    grid-gap: 1.5rem;
+    gap: 1.5rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+}
+
+.username {
+    font-family: 'Nunito', sans-serif;
+    margin-bottom: 1.5rem;
+
+}
+
+.email {
+    font-family: 'Nunito', sans-serif;
+    margin-bottom: 1.5rem;
+}
+
+.location {
+    font-family: 'Nunito', sans-serif;
+    margin-bottom: 1.5rem;
+}
+
+.password {
+    font-family: 'Nunito', sans-serif;
+}
+form label {
+    float: left;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    padding: 0
+}
+
+.right-label {
+    float: right;
+    cursor: pointer
+}
+
+input {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 5px;
+    outline: none;
+    border: none
+}
+
+.register-button {
+    margin: 1.5rem;
+    padding: 0.7rem;
+}
+
+#sub_btn {
+    cursor: pointer;
+    display: block;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1rem;
+    padding: 0.7rem;
+    border: none;
+    background: #222;
+    color: #fff;
+    border-radius: 15px;
+}
+
+#sub_btn:hover {
+    background: #333;
+    transition: all .5s
+}
+
+
+
