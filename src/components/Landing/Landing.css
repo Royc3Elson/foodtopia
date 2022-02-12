@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+
+
+.landing {
+    /* height: 100%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 2rem 4rem;
+    background-color: var(--bg-color);
+    height: 100vh;
+}
+
+
+.landing__container {
+    display: flex;
+    align-items: flex-start;
+}
+
+.landing__containerLeft {
+    flex: 0.4;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    gap: 2.1rem;
+    padding: 2rem;
+}
+
+.landing__containerLeft h1 {
+    font-size: 4.5rem;
+    font-family: 'Courgette', cursive;
+    color: var(--text);
+}
+
+.landing_btns {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.landing_btns button {
+    outline: none;
+    width: 150px;
+    height: 48px;
+    border-radius: 35px;
+    font-size: 0.85rem;
+    font-family: var(--secondary-font);
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+    transition: ease-in-out 0.2s;
+}
+
+.menu_btn {
+    background-color: var(--tertiary-color);
+    color: #ffffff;
+}
+
+.book_btn {
+    background-color: #ffffff;
+    color: var(--text);
+}
+
+.landing_btns button:hover {
+    transform: scale(1.05);
+}
+
+.landing__containerRight {
+    flex: 0.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.landing__containerRight img {
+    width: 100%;
+}

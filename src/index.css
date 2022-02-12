@@ -1,3 +1,14 @@
 * {
     margin: 0;
 }
+
+
+:root {
+    --primary-font: 'Roboto', sans-serif;
+    --secondary-font: 'Montserrat', sans-serif;
+    --bg-color: #f2d2c0;
+    --primary-color: #24A19C;
+    --secondary-color: #325288;
+    --tertiary-color: #D96098;
+    --text: #1a1a1a;
+}

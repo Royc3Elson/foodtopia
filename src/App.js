@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
-import { Login, Register } from './components'
+import { Landing, Login, Register } from './components'
 
 // import PrivateRoute from "./utils/PrivateRoute"
 
@@ -10,6 +10,7 @@ function App() {
     <div className="app">
       <BrowserRouter>
         <Routes>
+            <Route path="/" element={<Landing />} />
             <Route path="login" element={<Login />} />
             <Route path="signup" element={<Register />} />
 
