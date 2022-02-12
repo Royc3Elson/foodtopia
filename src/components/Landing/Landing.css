@@ -29,6 +29,10 @@
     gap: 1.5rem;
 }
 
+.mob__nav_btns {
+    display: none;
+}
+
 .landing__nav_btns button {
     outline: none;
     width: 120px;
@@ -77,7 +81,7 @@
     margin-top: 1.5rem;
 }
 
-.landing_btns button {
+.landing_btns button, .navmenu_btn {
     outline: none;
     width: 150px;
     height: 48px;
@@ -90,6 +94,7 @@
     text-decoration: none;
     transition: ease-in-out 0.2s;
 }
+
 
 .menu_btn {
     background-color: var(--tertiary-color);
@@ -222,15 +227,90 @@
 
 
 @media screen and (max-width: 992px) {
+    .landing {
+        padding: 1rem 1.5rem;
+    }
+    .landing__nav h1 {
+        padding-left: 0;
+        font-size: 2.5rem;
+    }
 
+    .landing__nav_btns {
+        display: none;
+    }
+    .mob__nav_btns {
+        display: block;
+    }
+
+    .landing__container {
+        flex-direction: column;
+    }
+    
+    .landing__containerLeft {
+        gap: 1.5rem;
+        padding: 0;
+    }
+    
+    .landing__containerLeft h1 {
+        font-size: 2.5rem;
+    }
+    .landing__containerRight img {
+        display: none;
+    }
+    .landing__cards {
+        margin-top: 0rem;
+        margin-bottom: 2rem;
+        grid-gap: 2rem;
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .landing__food_card {
+        margin-top: 8rem;
+    }
 }
 
 @media screen and (max-width: 800px) {
+    .landing {
+        padding: 1rem 1rem;
+    }
+    .landing__nav h1 {
+        font-size: 2.5rem;
+    }
 
+    .landing__container {
+        flex-direction: column;
+    }
+    
+    .landing__containerLeft {
+        gap: 1.5rem;
+    }
+    
+    .landing__containerLeft h1 {
+        font-size: 2.5rem;
+    }
+
+    .landing__cards {
+        margin-top: 3rem;
+        grid-gap: 1rem;
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    .landing__food_card {
+        margin-top: 8rem;
+    }
 }
 
 @media screen and (max-width: 600px) {
-
+    .landing_btns {
+        gap: 0.5rem;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .landing_btns button {
+        outline: none;
+        width: 130px;
+        height: 48px;
+    }
 }
 
 @media screen and (max-width: 400px) {

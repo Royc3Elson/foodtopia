@@ -1,5 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
+import { MenuItem, Menu } from '@mui/material'; 
+import { HiMenuAlt3 } from "react-icons/hi";
 
 import './Landing.css'
 
@@ -42,6 +44,17 @@ const dishes = [
 ]
 
 function Landing() {
+
+    const [anchorEl, setAnchorEl] = useState(null);
+    const open = Boolean(anchorEl);
+    const handleClick = (event) => {
+      setAnchorEl(event.currentTarget);
+    };
+    const handleClose = () => {
+      setAnchorEl(null);
+    };
+
+    
     return (
         <div className='landing'>
             <div className='landing__nav'>
@@ -55,6 +68,36 @@ function Landing() {
                         <button className='menu_btn'>Register</button>
                     </Link>
                 </div>
+                <div className='mob__nav_btns'>
+                    <HiMenuAlt3 onClick={handleClick} size={30} color='#D96098'/>
+                </div>
+                <Menu
+                    id="basic-menu"
+                    anchorEl={anchorEl}
+                    open={open}
+                    onClose={handleClose}
+                    disableScrollLock={true}
+                    PaperProps={{  
+                        style: {  
+                            width: 250, 
+                            height: 300,
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                        },  
+                    }} 
+                >
+                    <MenuItem style={{marginBottom: '1rem'}}>
+                        <Link to='/login'>
+                            <button className='navmenu_btn login_btn'>Login</button>
+                        </Link>
+                    </MenuItem>
+                    <MenuItem>
+                        <Link to='/register'>
+                            <button className='navmenu_btn menu_btn'>Register</button>
+                        </Link>
+                    </MenuItem>
+                </Menu>
             </div>
             <div className='landing__container'>
                 <div className='landing__containerLeft'>
