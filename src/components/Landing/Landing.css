@@ -189,6 +189,35 @@
 
 @media (min-width: 992px) and (max-width: 1380px) {
 
+    .landing {
+        padding: 2rem 3rem;
+    }
+    .landing__nav h1 {
+        padding-left: 1rem;
+        font-size: 3rem;
+    }
+    .landing__containerLeft {
+        gap: 2.1rem;
+        padding: 1rem;
+    }
+    
+    .landing__containerLeft h1 {
+        font-size: 3.5rem;
+    }
+    .landing__containerRight img {
+        width: 90%;
+    }
+    .landing__cards {
+        margin-top: 0rem;
+        margin-bottom: 2rem;
+        grid-gap: 2rem;
+        grid-template-columns: repeat(3,1fr);
+    }
+
+    .landing__food_card {
+        margin-top: 8rem;
+    }
+    
 }
 
 

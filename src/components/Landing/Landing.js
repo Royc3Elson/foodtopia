@@ -52,7 +52,7 @@ function Landing() {
                         <button className='login_btn'>Login</button>
                     </Link>
                     <Link to='/register'>
-                        <button className='register_btn'>Register</button>
+                        <button className='menu_btn'>Register</button>
                     </Link>
                 </div>
             </div>
