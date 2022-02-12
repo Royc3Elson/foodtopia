@@ -45,7 +45,7 @@ function Landing() {
     return (
         <div className='landing'>
             <div className='landing__nav'>
-                <h1>F<span>oo</span>dtopia</h1>
+                <h1>F<span className='tertiary'>oo</span>dtopia</h1>
 
                 <div className='landing__nav_btns'>
                     <Link to='/login'>

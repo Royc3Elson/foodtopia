@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+.tertiary {
+    color: var(--tertiary-color);
+}
+
 
 :root {
     --primary-font: 'Lato', sans-serif;
