@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 import { Landing, Login, Register } from './components'
-import { Book, Menu} from './pages'
+import { Book, Menu, Reviews } from './pages'
 
 // import PrivateRoute from "./utils/PrivateRoute"
 
@@ -16,6 +16,7 @@ function App() {
             <Route path="register" element={<Register />} />
             <Route path="book" element={<Book />} />
             <Route path="menu" element={<Menu />} />
+            <Route path="reviews" element={<Reviews />} />
 
             <Route path="*" element={<Navigate replace to="/" />} />
         </Routes>

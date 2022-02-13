@@ -1,11 +1,13 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { MenuItem, Menu } from '@mui/material'; 
 import { HiMenuAlt3 } from "react-icons/hi";
+import { AiFillStar } from "react-icons/ai";
 
 import './Landing.css'
 
 import landingImg from '../../assets/png/landingImg.png'
+import review from '../../assets/png/review.png'
 import dish1 from '../../assets/png/dish1.png'
 import dish2 from '../../assets/png/dish2.png'
 import dish3 from '../../assets/png/dish3.png'
@@ -53,6 +55,12 @@ function Landing() {
     const handleClose = () => {
       setAnchorEl(null);
     };
+
+    let navigate = useNavigate()
+
+    const goToReview = () => {
+        navigate('/reviews')
+    }
 
     
     return (
@@ -110,6 +118,17 @@ function Landing() {
                         <Link to='/book'>
                             <button className='book_btn'>Book A Table</button>
                         </Link>
+                    </div>
+                    <div className='landing__review'>
+                        <h3>Reviews</h3>
+                        <img onClick={goToReview} src={review} alt='' />
+                        <div className='landing__stars'>
+                            <AiFillStar color='#ffcc00' size={20}/>
+                            <AiFillStar color='#ffcc00' size={20}/>
+                            <AiFillStar color='#ffcc00' size={20}/>
+                            <AiFillStar color='#ffcc00' size={20}/>
+                            <AiFillStar color='#ffcc00' size={20}/>
+                        </div>
                     </div>
                 </div>
                 <div className='landing__containerRight'>

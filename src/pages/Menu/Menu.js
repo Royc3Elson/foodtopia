@@ -11,6 +11,7 @@ import hotdog from '../../assets/png/menu/hotdog.png'
 import pizza from '../../assets/png/menu/pizza.png'
 import pepsi from '../../assets/png/menu/pepsi.png'
 import sandwich from '../../assets/png/menu/sandwich.png'
+import sushi from '../../assets/png/menu/sushi.png'
 
 
 
@@ -33,14 +34,14 @@ const menuItems = [
     id: 3,
     name: 'Pizza',
     desc: 'Tasty yummy pizza yummy tasty food',
-    price: '99',
+    price: '150',
     image: pizza
   },
   {
     id: 4,
     name: 'Pepsi',
     desc: 'Tasty yummy pepsi yummy tasty drink',
-    price: '99',
+    price: '30',
     image: pepsi
   },
   {
@@ -49,6 +50,13 @@ const menuItems = [
     desc: 'Tasty yummy sandwich yummy tasty food',
     price: '99',
     image: sandwich
+  },
+    {
+    id: 6,
+    name: 'Sushi',
+    desc: 'Tasty yummy sushi yummy tasty food',
+    price: '199',
+    image: sushi
   },
 ]
 
