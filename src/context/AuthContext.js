@@ -8,6 +8,8 @@ function AuthContextProvider(props) {
     const [currentUser, setCurrentUser] = useState(localStorage.getItem('authUser'))
     const [pending, setPending] = useState(true) 
 
+    const [cart, setCart] = useState([])
+
     const authListener = () => {
         auth.onAuthStateChanged(user => {
             if(user) {
@@ -24,8 +26,11 @@ function AuthContextProvider(props) {
     const handleUser = (user) => {
         setCurrentUser(user)
         localStorage.setItem('authUser', user)
-        console.log(currentUser)
     }
+
+    const handleCart = (item) => {
+        setCart([...cart, item])
+        localStorage.setItem('cart', cart)    }
 
     useEffect(() => {
         authListener()
@@ -37,7 +42,7 @@ function AuthContextProvider(props) {
         localStorage.removeItem('authUser')
     }
 
-    const value = { currentUser, pending, handleLogout, handleUser }
+    const value = { currentUser, pending, handleLogout, handleUser, cart, handleCart }
 
 
 

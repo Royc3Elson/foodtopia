@@ -23,7 +23,6 @@ function Login() {
         if(email && pass) {
             auth.signInWithEmailAndPassword(email, pass)
                 .then(res => {
-                    console.log(res.user)
                     handleUser(res.user)
                     if(res) {
                         //

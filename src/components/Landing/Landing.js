@@ -1,8 +1,10 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import { Link, useNavigate } from 'react-router-dom';
 import { MenuItem, Menu } from '@mui/material'; 
 import { HiMenuAlt3 } from "react-icons/hi";
 import { AiFillStar } from "react-icons/ai";
+
+import { AuthContext } from '../../context/AuthContext'
 
 import './Landing.css'
 
@@ -48,6 +50,11 @@ const dishes = [
 function Landing() {
 
     const [anchorEl, setAnchorEl] = useState(null);
+    const { currentUser } = useContext(AuthContext);
+
+    
+    console.log(currentUser)
+
     const open = Boolean(anchorEl);
     const handleClick = (event) => {
       setAnchorEl(event.currentTarget);
@@ -69,12 +76,20 @@ function Landing() {
                 <h1>F<span className='tertiary'>oo</span>dtopia</h1>
 
                 <div className='landing__nav_btns'>
-                    <Link to='/login'>
-                        <button className='login_btn'>Login</button>
-                    </Link>
-                    <Link to='/register'>
-                        <button className='menu_btn'>Register</button>
-                    </Link>
+                    {currentUser ? (
+                        <Link to='/profile'>
+                            <button className='menu_btn'>Profile</button>
+                        </Link>
+                    ) : (
+                        <>
+                            <Link to='/login'>
+                                <button className='login_btn'>Login</button>
+                            </Link>
+                            <Link to='/register'>
+                                <button className='menu_btn'>Register</button>
+                            </Link>
+                        </>
+                    )}
                 </div>
                 <div className='mob__nav_btns'>
                     <HiMenuAlt3 onClick={handleClick} size={30} color='#D96098'/>
