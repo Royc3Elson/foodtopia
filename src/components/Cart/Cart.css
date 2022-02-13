@@ -66,6 +66,10 @@
     justify-content: center;
 }
 
+.cart-total {
+    flex: 0.7;
+}
+
 .price-field {
     padding: 0.75rem;
 }

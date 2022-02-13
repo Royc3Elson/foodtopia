@@ -14,19 +14,22 @@ function Cart() {
                <h2>Items Selected:</h2>
             </div>
             <div className='cart-price'>
-              <div className='price-field'>
-                <h2>subtotal</h2>
+              <div className='cart-total'>
+                <div className='price-field'>
+                  <h2>subtotal</h2>
+                </div>
+                <div className='div-line'>
+                </div>
+                <div className='price-field'>
+                  <h2>delivery charges</h2>
+                </div>
+                <div className='div-line'>
+                </div>
+                <div className='price-field'>
+                  <h2>Total</h2>
               </div>
-              <div className='div-line'>
               </div>
-              <div className='price-field'>
-                <h2>delivery charges</h2>
-              </div>
-              <div className='div-line'>
-              </div>
-              <div className='price-field'>
-                <h2>Total</h2>
-              </div>
+              
             </div>
          </div>
       </div>
