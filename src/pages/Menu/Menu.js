@@ -1,5 +1,5 @@
 import React from 'react'
-import { IoArrowBackOutline } from "react-icons/io5";
+import { IoArrowBackOutline, IoCartOutline } from "react-icons/io5";
 
 import { Link } from 'react-router-dom';
 
@@ -65,6 +65,9 @@ function Menu() {
     <div className='menu'>
       <Link to='/'>
         <IoArrowBackOutline className='menu_back'/>
+      </Link>
+      <Link to='/cart'>
+        <IoCartOutline className='cart-icon'/>
       </Link>
       <div className='menu_header'>
         <h1>Our Menu</h1>

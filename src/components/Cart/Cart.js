@@ -16,20 +16,25 @@ function Cart() {
             <div className='cart-price'>
               <div className='cart-total'>
                 <div className='price-field'>
-                  <h2>subtotal</h2>
+                  <h2>Subtotal:</h2>
+                  <p>₹35</p>
                 </div>
                 <div className='div-line'>
                 </div>
                 <div className='price-field'>
-                  <h2>delivery charges</h2>
+                  <h2>Delivery charges:</h2>
+                  <p>₹35</p>
                 </div>
                 <div className='div-line'>
                 </div>
-                <div className='price-field'>
-                  <h2>Total</h2>
+                <div className='price-field big_price'>
+                  <h2>Total:</h2>
+                  <p>₹70</p>
               </div>
               </div>
-              
+              <button className='checkout_btn'>
+                Checkout
+              </button>
             </div>
          </div>
       </div>
