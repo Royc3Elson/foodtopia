@@ -13,6 +13,12 @@ import pizza from '../../assets/png/menu/pizza.png'
 import pepsi from '../../assets/png/menu/pepsi.png'
 import sandwich from '../../assets/png/menu/sandwich.png'
 import sushi from '../../assets/png/menu/sushi.png'
+import cake from '../../assets/png/menu/cake.png'
+import croissant from '../../assets/png/menu/croissant.png'
+import falafel from '../../assets/png/menu/falafel.png'
+import kfc from '../../assets/png/menu/kfc.png'
+import schnitzel from '../../assets/png/menu/schnitzel.png'
+import fries from '../../assets/png/menu/fries.png'
 
 
 
@@ -58,6 +64,48 @@ const menuItems = [
     desc: 'This traditional Japanese dish will leave wanting more',
     price: '199',
     image: sushi
+  },
+  {
+    id: 7,
+    name: 'Chocolate Cake',
+    desc: 'A rich moist chocolate cake with a chocolate buttercream icing. This is the best cake in the world!',
+    price: '799',
+    image: cake
+  },
+  {
+    id: 8,
+    name: 'Croissant',
+    desc: 'A croissant is a buttery, flaky, viennoiserie pastry of Austrian origin, but mostly associated with France',
+    price: '799',
+    image: croissant
+  },
+  {
+    id: 9,
+    name: 'Falafel',
+    desc: 'Falafel; is a deep-fried ball or patty-shaped fritter made from ground chickpeas, broad beans, or both.',
+    price: '499',
+    image: falafel
+  },
+  {
+    id: 10,
+    name: 'KFC',
+    desc: "KFC is one of the most iconic fast food brands known to man. Its finger lickin' good KFC is the stuff that breaded chicken dreams are made of.",
+    price: '499',
+    image: kfc
+  },
+  {
+    id: 11,
+    name: 'Schnitzel',
+    desc: "A schnitzel is a thin slice of meat. The meat is usually thinned by pounding with a meat tenderizer",
+    price: '859',
+    image: schnitzel
+  },
+  {
+    id: 12,
+    name: 'French Fries',
+    desc: "French fries or simply fries, are batonnet or allumette-cut deep-fried potatoes, originating from either Belgium or France.",
+    price: '159',
+    image: fries
   },
 ]
 

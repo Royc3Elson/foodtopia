@@ -4,6 +4,15 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
+}
+
+.auth__Logo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 50px;
+    cursor: pointer;
 }
 
 h2 {
@@ -94,3 +103,9 @@ input {
 
 
 
+
+@media screen and (max-width: 992px) {
+    .register-container {
+        width: 90%;
+    }
+}

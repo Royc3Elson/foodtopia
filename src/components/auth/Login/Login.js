@@ -6,6 +6,8 @@ import './Login.css'
 import { AuthContext } from '../../../context/AuthContext'
 import { auth } from '../../../firebase/firebase';
 
+import logo from '../../../assets/logo.png'
+
 function Login() {
 
     const [email, setEmail] = useState('')
@@ -14,8 +16,10 @@ function Login() {
     const { handleUser } = useContext(AuthContext);
 
     let navigate = useNavigate();
-    function goToHome() {
-        navigate("/home");
+
+    
+    function goHome() {
+        navigate("/");
     }
 
     const handleOnClick = (e) => {
@@ -30,7 +34,7 @@ function Login() {
                      }              
                 })
                 .then(() => {
-                    goToHome();
+                    goHome();
                 })
                 .catch((er) => {
                     console.log(er)
@@ -43,6 +47,7 @@ function Login() {
 
 
   return <div className="login">
+            <img onClick={goHome} src={logo} alt="" className='auth__Logo'/>
             <h2>Sign in to us</h2>
             <div className='login-container'>
                 <form onSubmit={handleOnClick} className='form'>

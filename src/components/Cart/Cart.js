@@ -32,7 +32,11 @@ function Cart() {
   console.log(total)
 
   const removeFromCart = (id) => {
-    
+      db.collection('users').doc(currentUser.uid).collection('cart').doc(id)  
+        .delete() 
+        .then(() => {
+          alert('removed from cart')
+        }) 
   }
 
   return (

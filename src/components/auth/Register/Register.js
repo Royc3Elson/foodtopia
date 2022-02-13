@@ -6,6 +6,8 @@ import firebase from 'firebase/compat/app';
 
 import { auth, db } from '../../../firebase/firebase';
 
+import logo from '../../../assets/logo.png'
+
 function Register() {
 
     const [username, setUsername] = useState('')
@@ -16,6 +18,10 @@ function Register() {
     let navigate = useNavigate();
     function goToLogin() {
         navigate("/login");
+    }
+
+    function goHome() {
+        navigate("/");
     }
 
     const handleOnClick = (e) => {
@@ -51,6 +57,7 @@ function Register() {
 
     return (
         <div className="register">
+            <img onClick={goHome} src={logo} alt="" className='auth__Logo'/>
             <h2>Create your personal account</h2>
             <div className='register-container'>
                 <form onSubmit={handleOnClick}>
