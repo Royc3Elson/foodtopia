@@ -1,17 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 import logo from '../../assets/logo.png'
 import './Book.css'
 
 function Book() {
+
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [msg, setMsg] = useState('')
+
   let navigate = useNavigate();
   function goHome() {
     navigate("/");
 }
 
   const handleContact = () => {
-    
+    alert('Submitted')
   }
 
   return (
@@ -26,23 +31,22 @@ function Book() {
         <div className='contact'>
             <h1>Contact US</h1>
             <form className='loginSignin__form' onSubmit={handleContact}>
-                <h1>Add New Destination</h1>
                 <div className='ls_input_row'>
                     <div className='ls_input_container'>
                         <label>Name</label>
-                        {/* <input type="text" value={name} onChange={(e) => setName(e.target.value)} placeholder='Serayu Rafting' className='ls_input'/> */}
+                        <input type="text" value={name} onChange={(e) => setName(e.target.value)} placeholder='Sarasu Molls' className='ls_input'/>
                     </div>
                 </div>
                 <div className='ls_input_row'>
                     <div className='ls_input_container'>
-                        <label>Description</label>
-                        {/* <input type="text" value={description} onChange={(e) => setDescription(e.target.value)} className='ls_input'/> */}
+                        <label>Email</label>
+                        <input type="text" value={email} onChange={(e) => setEmail(e.target.value)} placeholder='gayugmail.com@' className='ls_input'/>
                     </div>
                 </div>
                 <div className='ls_input_row'>
                     <div className='ls_input_container'>
-                        <label>Description</label>
-                        {/* <input type="text" value={description} onChange={(e) => setDescription(e.target.value)} className='ls_input'/> */}
+                        <label>Message</label>
+                        <input type="text" value={msg} onChange={(e) => setMsg(e.target.value)} placeholder='Type Message...' className='ls_input'/>
                     </div>
                 </div>
 
