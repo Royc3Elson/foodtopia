@@ -15,6 +15,7 @@
     align-items: center;
     width: 70%;
     margin: 0 auto;
+    margin-top: 3rem;
 }
 
 .about h1 {
@@ -127,8 +128,8 @@
 
 .ls_input_submit button {
     outline: none;
-    width: 175px;
-    height: 40px;
+    width: 50%;
+    height: 50px;
     border-radius: 10px;
     font-family: var(--primary-font);
     font-style: normal;
@@ -175,5 +176,13 @@
         gap: 0.25rem;
         width: 100%;
         margin: 0.5rem 0;
+    }
+    
+    .book {
+        padding: 1rem;
+        gap: 3rem;
+    }
+    .contact, .about {
+        width: 90%;
     }
 }

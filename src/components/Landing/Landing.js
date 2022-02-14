@@ -53,7 +53,7 @@ function Landing() {
     const { currentUser } = useContext(AuthContext);
 
     
-    console.log(currentUser)
+    // console.log(currentUser)
 
     const open = Boolean(anchorEl);
     const handleClick = (event) => {
@@ -110,16 +110,26 @@ function Landing() {
                         },  
                     }} 
                 >
-                    <MenuItem style={{marginBottom: '1rem'}}>
-                        <Link to='/login'>
-                            <button className='navmenu_btn login_btn'>Login</button>
-                        </Link>
-                    </MenuItem>
-                    <MenuItem>
-                        <Link to='/register'>
-                            <button className='navmenu_btn menu_btn'>Register</button>
-                        </Link>
-                    </MenuItem>
+                    {currentUser ? (
+                        <MenuItem>
+                            <Link to='/profile'>
+                                <button className='navmenu_btn menu_btn'>Profile</button>
+                            </Link>
+                        </MenuItem>
+                    ) : (
+                        <>
+                            <MenuItem style={{marginBottom: '1rem'}}>
+                                <Link to='/login'>
+                                    <button className='navmenu_btn login_btn'>Login</button>
+                                </Link>
+                            </MenuItem>
+                            <MenuItem>
+                                <Link to='/register'>
+                                    <button className='navmenu_btn menu_btn'>Register</button>
+                                </Link>
+                            </MenuItem>
+                        </>
+                    )}
                 </Menu>
             </div>
             <div className='landing__container'>
